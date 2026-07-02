@@ -1,0 +1,462 @@
+
+.page-header {
+    background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary-light));
+    padding: 48px 24px;
+    text-align: center;
+    color: var(--color-white);
+}
+
+.page-header-content h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.page-header-content h1 i {
+    color: #f39c12;
+    margin-right: 12px;
+}
+
+.page-header-content p {
+    font-size: 1.15rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.main-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+}
+
+.seccion-info {
+    margin-bottom: 40px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.info-card {
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: 28px 24px;
+    text-align: center;
+    box-shadow: 0 4px 16px var(--color-shadow);
+    transition: var(--transition-default);
+    border-top: 4px solid var(--color-secondary);
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px var(--color-shadow-hover);
+}
+
+.info-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 16px;
+    background: var(--color-primary-lighter);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--color-primary);
+}
+
+.info-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+}
+
+.info-card p {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+.info-card p strong {
+    color: var(--color-text);
+}
+
+.seccion-instrucciones {
+    margin-bottom: 40px;
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: 32px 36px;
+    box-shadow: 0 4px 16px var(--color-shadow);
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+}
+
+.section-title i {
+    color: #f39c12;
+}
+
+.section-description {
+    color: var(--color-text-light);
+    font-size: 1.05rem;
+    max-width: 800px;
+    margin-bottom: 24px;
+    line-height: 1.7;
+}
+
+.instrucciones-lista {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 12px;
+}
+
+.instruccion-paso {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.paso-numero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.paso-contenido h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 4px;
+}
+
+.paso-contenido p {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    line-height: 1.5;
+}
+
+.seccion-formulario {
+    margin-bottom: 40px;
+}
+
+.formulario-container {
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 16px var(--color-shadow);
+    margin-bottom: 20px;
+}
+
+.formulario-embed {
+    width: 100%;
+    min-height: 700px;
+    position: relative;
+}
+
+.formulario-frame {
+    width: 100%;
+    min-height: 700px;
+    border: none;
+    display: block;
+}
+
+.formulario-fallback {
+    display: none;
+    padding: 20px 24px;
+    background: #fff3cd;
+    border-radius: var(--border-radius-sm);
+    margin: 16px 24px 24px;
+    text-align: center;
+}
+
+.formulario-fallback p {
+    font-size: 0.95rem;
+    color: #856404;
+}
+
+.formulario-fallback a {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.formulario-fallback a:hover {
+    color: var(--color-secondary);
+}
+
+.formulario-nota {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    background: var(--color-gray-100);
+    border-radius: var(--border-radius);
+    padding: 20px 24px;
+}
+
+.nota-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: var(--color-text);
+}
+
+.nota-item i {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.seccion-faq {
+    margin-bottom: 40px;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.faq-item {
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 2px 12px var(--color-shadow);
+    transition: var(--transition-default);
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 20px var(--color-shadow-hover);
+}
+
+.faq-pregunta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    cursor: pointer;
+    transition: var(--transition-default);
+    user-select: none;
+}
+
+.faq-pregunta:hover {
+    background: var(--color-primary-lighter);
+}
+
+.faq-pregunta h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin: 0;
+    flex: 1;
+    padding-right: 12px;
+}
+
+.faq-pregunta i {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.faq-item.active .faq-pregunta i {
+    transform: rotate(180deg);
+}
+
+.faq-respuesta {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 20px;
+}
+
+.faq-item.active .faq-respuesta {
+    max-height: 300px;
+    padding: 0 20px 20px;
+}
+
+.faq-respuesta p {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.seccion-contacto-respaldo {
+    margin-bottom: 20px;
+}
+
+.contacto-respaldo-card {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    box-shadow: 0 4px 16px rgba(0, 61, 122, 0.3);
+}
+
+.contacto-respaldo-card i {
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+    flex-shrink: 0;
+}
+
+.contacto-respaldo-card h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.contacto-respaldo-card p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
+
+.contacto-respaldo-datos {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.contacto-respaldo-datos span {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contacto-respaldo-datos i {
+    font-size: 0.9rem;
+    color: var(--color-secondary);
+}
+
+@media (max-width: 1024px) {
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .instrucciones-lista {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .formulario-nota {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .instrucciones-lista {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .instruccion-paso {
+        gap: 12px;
+    }
+
+    .seccion-instrucciones {
+        padding: 24px 20px;
+    }
+
+    .formulario-embed {
+        min-height: 500px;
+    }
+
+    .formulario-frame {
+        min-height: 500px;
+    }
+
+    .formulario-nota {
+        grid-template-columns: 1fr;
+        padding: 16px 20px;
+    }
+
+    .contacto-respaldo-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 20px;
+    }
+
+    .contacto-respaldo-datos {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header-content h1 {
+        font-size: 1.4rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .formulario-embed {
+        min-height: 400px;
+    }
+
+    .formulario-frame {
+        min-height: 400px;
+    }
+
+    .info-card {
+        padding: 20px 16px;
+    }
+
+    .faq-pregunta {
+        padding: 14px 16px;
+    }
+
+    .faq-pregunta h4 {
+        font-size: 0.85rem;
+    }
+
+    .faq-item.active .faq-respuesta {
+        padding: 0 16px 16px;
+    }
+
+    .contacto-respaldo-card {
+        padding: 20px 16px;
+    }
+
+    .contacto-respaldo-card i {
+        font-size: 2rem;
+    }
+}

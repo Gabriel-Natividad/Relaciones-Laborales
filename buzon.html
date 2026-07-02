@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buzón de Quejas | Cotemar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/buzon.css" />
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="assets/images/banner/logo-cotemar.png" alt="Cotemar" class="logo-img" />
+                    <span class="logo-text">Relaciones Laborales</span>
+                </a>
+            </div>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="trabajo-social.html"><i class="fas fa-hand-holding-heart"></i> Trabajo Social</a></li>
+                <li><a href="gptw.html"><i class="fas fa-trophy"></i> GPTW</a></li>
+                <li><a href="metricas.html"><i class="fas fa-chart-line"></i> Métricas</a></li>
+                <li><a href="buzon.html" class="active"><i class="fas fa-inbox"></i> Buzón</a></li>
+                <li><a href="vida-empresa.html"><i class="fas fa-users"></i> Vida en la Empresa</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="page-header-content">
+            <h1><i class="fas fa-inbox"></i> Buzón de Quejas</h1>
+            <p>Espacio seguro y confidencial para reportar situaciones relacionadas con el código de ética</p>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="container">
+
+            <section class="seccion-info">
+                <div class="info-grid">
+                    <div class="info-card seguridad">
+                        <div class="info-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>🔒 100% Anónimo</h3>
+                        <p>
+                            Este buzón está configurado para garantizar el anonimato total.
+                            <strong>No se recopila tu correo electrónico</strong> ni ningún dato personal.
+                        </p>
+                    </div>
+
+                    <div class="info-card confidencialidad">
+                        <div class="info-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>🔐 Confidencialidad</h3>
+                        <p>
+                            Toda la información es manejada con estricta confidencialidad
+                            y solo será utilizada para investigar y resolver las situaciones reportadas.
+                        </p>
+                    </div>
+
+                    <div class="info-card proteccion">
+                        <div class="info-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3>🛡️ Protección al Denunciante</h3>
+                        <p>
+                            Cotemar garantiza la protección de los colaboradores que reportan
+                            situaciones de buena fe, sin temor a represalias.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="seccion-instrucciones">
+                <h2 class="section-title">📋 Instrucciones para usar el Buzón</h2>
+                <div class="instrucciones-lista">
+                    <div class="instruccion-paso">
+                        <span class="paso-numero">1</span>
+                        <div class="paso-contenido">
+                            <h4>Identifica la situación</h4>
+                            <p>Describe de manera clara y objetiva la situación que deseas reportar.</p>
+                        </div>
+                    </div>
+                    <div class="instruccion-paso">
+                        <span class="paso-numero">2</span>
+                        <div class="paso-contenido">
+                            <h4>Completa el formulario</h4>
+                            <p>Llena todos los campos del formulario con la información relevante.</p>
+                        </div>
+                    </div>
+                    <div class="instruccion-paso">
+                        <span class="paso-numero">3</span>
+                        <div class="paso-contenido">
+                            <h4>Envía tu reporte</h4>
+                            <p>Revisa tu información y envía el formulario. Recibirás un acuse de recibo.</p>
+                        </div>
+                    </div>
+                    <div class="instruccion-paso">
+                        <span class="paso-numero">4</span>
+                        <div class="paso-contenido">
+                            <h4>Seguimiento</h4>
+                            <p>El área de Relaciones Laborales dará seguimiento a tu reporte de manera confidencial.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="seccion-formulario">
+                <h2 class="section-title">📝 Formulario de Reporte</h2>
+                <p class="section-description">
+                    Completa el siguiente formulario de manera <strong>anónima y confidencial</strong>.
+                    Todos los campos son importantes para poder dar seguimiento adecuado.
+                </p>
+                <div class="formulario-container">
+                    <div class="formulario-embed">
+                        <iframe 
+                            src="https://docs.google.com/forms/d/e/TU_ID_DEL_FORMULARIO/viewform?embedded=true"
+                            frameborder="0"
+                            marginheight="0"
+                            marginwidth="0"
+                            class="formulario-frame"
+                            allowfullscreen>
+                            Cargando formulario...
+                        </iframe>
+                    </div>
+
+                    <div class="formulario-fallback">
+                        <p>
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Si el formulario no carga correctamente, 
+                            <a href="https://docs.google.com/forms/d/e/TU_ID_DEL_FORMULARIO/viewform" target="_blank">
+                                haz clic aquí para abrirlo en una nueva ventana
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="formulario-nota">
+                    <div class="nota-item">
+                        <i class="fas fa-check-circle" style="color: #2ecc71;"></i>
+                        <span><strong>Anonimato garantizado:</strong> No se recopila tu correo electrónico.</span>
+                    </div>
+                    <div class="nota-item">
+                        <i class="fas fa-check-circle" style="color: #2ecc71;"></i>
+                        <span><strong>Sin identificación:</strong> No se solicita tu nombre ni número de empleado.</span>
+                    </div>
+                    <div class="nota-item">
+                        <i class="fas fa-check-circle" style="color: #2ecc71;"></i>
+                        <span><strong>Alta seguridad:</strong> Los datos están protegidos y solo accesibles por personal autorizado.</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="seccion-faq">
+                <h2 class="section-title">❓ Preguntas Frecuentes</h2>
+
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-pregunta">
+                            <h4>¿Qué tipo de situaciones puedo reportar?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-respuesta">
+                            <p>
+                                Puedes reportar cualquier situación que consideres una violación al código de ética,
+                                conductas inapropiadas, acoso, discriminación, fraudes, o cualquier otra desviación
+                                que afecte el ambiente laboral.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-pregunta">
+                            <h4>¿Cómo sé que mi reporte es anónimo?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-respuesta">
+                            <p>
+                                El formulario está configurado para no recopilar direcciones de correo electrónico
+                                ni ningún dato personal. Tampoco se registra la IP del usuario que envía el reporte.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-pregunta">
+                            <h4>¿Qué pasa después de enviar mi reporte?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-respuesta">
+                            <p>
+                                El área de Relaciones Laborales revisará tu reporte de manera confidencial,
+                                realizará las investigaciones necesarias y tomará las acciones correspondientes.
+                                No podremos contactarte directamente (por el anonimato), pero daremos seguimiento
+                                a todos los reportes recibidos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-pregunta">
+                            <h4>¿Hay algún límite para enviar reportes?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-respuesta">
+                            <p>
+                                No hay límite. Puedes enviar cuantos reportes consideres necesarios.
+                                Todos serán tratados con la misma seriedad y confidencialidad.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="seccion-contacto-respaldo">
+                <div class="contacto-respaldo-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h4>¿Necesitas ayuda adicional?</h4>
+                        <p>
+                            Si prefieres hacer un reporte de manera presencial o por teléfono,
+                            puedes contactar al área de Relaciones Laborales:
+                        </p>
+                        <div class="contacto-respaldo-datos">
+                            <span><i class="fas fa-envelope"></i> rrhh@cotemar.com.mx</span>
+                            <span><i class="fas fa-phone"></i> +52 (938) 381 1400 Ext. 1245</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <img src="assets/images/banner/logo-cotemar.png" alt="Cotemar" class="footer-logo-img" />
+                    <span>Relaciones Laborales</span>
+                </div>
+                <p class="footer-desc">
+                    Construyendo un mejor lugar para trabajar en Cotemar, todos los días.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Enlaces rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="trabajo-social.html">Trabajo Social</a></li>
+                    <li><a href="gptw.html">GPTW</a></li>
+                    <li><a href="metricas.html">Métricas</a></li>
+                    <li><a href="buzon.html">Buzón</a></li>
+                    <li><a href="vida-empresa.html">Vida en la Empresa</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contáctanos</h4>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> contact@cotemar.com.mx</li>
+                    <li><i class="fas fa-phone"></i> +52 (938) 381 1400</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Cd. del Carmen, Camp.</li>
+                    <li><i class="fas fa-phone"></i> +52 (55) 9689 2600</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Ciudad de México</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Portal de Relaciones Laborales - Cotemar. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/buzon.js"></script>
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Métricas y Resultados | Cotemar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/metricas.css" />
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="assets/images/banner/logo-cotemar.png" alt="Cotemar" class="logo-img" />
+                    <span class="logo-text">Relaciones Laborales</span>
+                </a>
+            </div>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="trabajo-social.html"><i class="fas fa-hand-holding-heart"></i> Trabajo Social</a></li>
+                <li><a href="gptw.html"><i class="fas fa-trophy"></i> GPTW</a></li>
+                <li><a href="metricas.html" class="active"><i class="fas fa-chart-line"></i> Métricas</a></li>
+                <li><a href="buzon.html"><i class="fas fa-inbox"></i> Buzón</a></li>
+                <li><a href="vida-empresa.html"><i class="fas fa-users"></i> Vida en la Empresa</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="page-header-content">
+            <h1><i class="fas fa-chart-line"></i> Métricas y Resultados</h1>
+            <p>Dashboard gerencial para el seguimiento de indicadores clave</p>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="seccion-filtros">
+                <div class="filtros-container">
+                    <div class="filtro-group">
+                        <label for="periodo"><i class="fas fa-calendar"></i> Periodo:</label>
+                        <select id="periodo" class="filtro-select">
+                            <option value="2026">2026</option>
+                            <option value="2025" selected>2025</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                        </select>
+                    </div>
+
+                    <div class="filtro-group">
+                        <label for="departamento"><i class="fas fa-building"></i> Departamento:</label>
+                        <select id="departamento" class="filtro-select">
+                            <option value="todos">Todos</option>
+                            <option value="operaciones">Operaciones</option>
+                            <option value="administracion">Administración</option>
+                            <option value="ingenieria">Ingeniería</option>
+                            <option value="rh">Recursos Humanos</option>
+                            <option value="logistica">Logística</option>
+                        </select>
+                    </div>
+
+                    <div class="filtro-group">
+                        <label for="metricas-tipo"><i class="fas fa-chart-pie"></i> Tipo:</label>
+                        <select id="metricas-tipo" class="filtro-select">
+                            <option value="clima">Clima Laboral</option>
+                            <option value="desempeno">Desempeño</option>
+                            <option value="retencion">Retención</option>
+                            <option value="satisfaccion">Satisfacción</option>
+                        </select>
+                    </div>
+
+                    <button class="btn-filtro-aplicar" id="btnAplicarFiltros">
+                        <i class="fas fa-sync"></i> Aplicar Filtros
+                    </button>
+                </div>
+
+                <div class="filtros-rapidos">
+                    <span class="filtro-rapido-label">Filtros rápidos:</span>
+                    <button class="filtro-rapido-btn active" data-periodo="2025" data-depto="todos" data-tipo="clima">📊 Clima 2025</button>
+                    <button class="filtro-rapido-btn" data-periodo="2024" data-depto="todos" data-tipo="clima">📈 Clima 2024</button>
+                    <button class="filtro-rapido-btn" data-periodo="2025" data-depto="operaciones" data-tipo="desempeno">🎯 Operaciones</button>
+                    <button class="filtro-rapido-btn" data-periodo="2025" data-depto="rh" data-tipo="retencion">👥 Retención RH</button>
+                </div>
+            </section>
+
+            <section class="seccion-kpis">
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-icon" style="background: #e8f0fe; color: #003d7a;">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                        <div class="kpi-info">
+                            <span class="kpi-label">Satisfacción General</span>
+                            <span class="kpi-value" id="kpiSatisfaccion">87%</span>
+                            <span class="kpi-trend positive">
+                                <i class="fas fa-arrow-up"></i> +3.2%
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card">
+                        <div class="kpi-icon" style="background: #e8f5e9; color: #2e7d32;">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="kpi-info">
+                            <span class="kpi-label">Clima Laboral</span>
+                            <span class="kpi-value" id="kpiClima">92%</span>
+                            <span class="kpi-trend positive">
+                                <i class="fas fa-arrow-up"></i> +5.1%
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card">
+                        <div class="kpi-icon" style="background: #fce4ec; color: #c62828;">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <div class="kpi-info">
+                            <span class="kpi-label">Retención de Talento</span>
+                            <span class="kpi-value" id="kpiRetencion">89%</span>
+                            <span class="kpi-trend positive">
+                                <i class="fas fa-arrow-up"></i> +2.8%
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card">
+                        <div class="kpi-icon" style="background: #fff3e0; color: #e65100;">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="kpi-info">
+                            <span class="kpi-label">Productividad</span>
+                            <span class="kpi-value" id="kpiProductividad">94%</span>
+                            <span class="kpi-trend positive">
+                                <i class="fas fa-arrow-up"></i> +4.0%
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="seccion-graficas">
+                <h2 class="section-title">📊 Tablero de Indicadores</h2>
+                <p class="section-description">
+                    Visualización de datos en tiempo real. <strong>Reto técnico:</strong> Espacio preparado para incrustar gráficas de Google Sheets o Looker Studio.
+                </p>
+
+                <div class="grafica-container">
+                    <div class="grafica-header">
+                        <h3><i class="fas fa-chart-area"></i> Evolución del Clima Laboral</h3>
+                        <span class="grafica-periodo">2023 - 2026</span>
+                    </div>
+                    <div class="grafica-body">
+                        <div class="grafica-embed" id="graficaClima">
+                            <div class="embed-placeholder">
+                                <i class="fas fa-chart-line"></i>
+                                <p>🔗 Aquí se incrustará la gráfica de Google Sheets o Looker Studio</p>
+                                <span class="embed-nota">Esperando configuración de la fuente de datos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grafica-container">
+                    <div class="grafica-header">
+                        <h3><i class="fas fa-chart-pie"></i> Distribución de Satisfacción por Departamento</h3>
+                        <span class="grafica-periodo">2025</span>
+                    </div>
+                    <div class="grafica-body">
+                        <div class="grafica-embed" id="graficaDepartamentos">
+                            <div class="embed-placeholder">
+                                <i class="fas fa-chart-pie"></i>
+                                <p>🔗 Aquí se incrustará la gráfica de Google Sheets o Looker Studio</p>
+                                <span class="embed-nota">Esperando configuración de la fuente de datos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grafica-container">
+                    <div class="grafica-header">
+                        <h3><i class="fas fa-chart-bar"></i> Retención vs Rotación</h3>
+                        <span class="grafica-periodo">2023 - 2026</span>
+                    </div>
+                    <div class="grafica-body">
+                        <div class="grafica-embed" id="graficaRetencion">
+                            <div class="embed-placeholder">
+                                <i class="fas fa-chart-bar"></i>
+                                <p>🔗 Aquí se incrustará la gráfica de Google Sheets o Looker Studio</p>
+                                <span class="embed-nota">Esperando configuración de la fuente de datos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grafica-instrucciones">
+                    <h4><i class="fas fa-info-circle"></i> Cómo incrustar gráficas</h4>
+                    <div class="instrucciones-grid">
+                        <div class="instruccion-item">
+                            <span class="instruccion-numero">1</span>
+                            <div>
+                                <strong>Google Sheets</strong>
+                                <p>Publica tu gráfica y copia el enlace de embed</p>
+                            </div>
+                        </div>
+                        <div class="instruccion-item">
+                            <span class="instruccion-numero">2</span>
+                            <div>
+                                <strong>Looker Studio</strong>
+                                <p>Comparte tu reporte y obtén el código de incrustación</p>
+                            </div>
+                        </div>
+                        <div class="instruccion-item">
+                            <span class="instruccion-numero">3</span>
+                            <div>
+                                <strong>Incrustar</strong>
+                                <p>Reemplaza el placeholder con el iframe correspondiente</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="seccion-tabla">
+                <h2 class="section-title">📋 Resultados por Departamento</h2>
+                <p class="section-description">
+                    Detalle de métricas por área para un análisis más granular.
+                </p>
+
+                <div class="tabla-container">
+                    <table class="tabla-metricas">
+                        <thead>
+                            <tr>
+                                <th>Departamento</th>
+                                <th>Satisfacción</th>
+                                <th>Clima</th>
+                                <th>Retención</th>
+                                <th>Productividad</th>
+                                <th>Tendencia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Operaciones</strong></td>
+                                <td>88%</td>
+                                <td>91%</td>
+                                <td>87%</td>
+                                <td>95%</td>
+                                <td><span class="trend-badge positive"><i class="fas fa-arrow-up"></i> +2%</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Administración</strong></td>
+                                <td>85%</td>
+                                <td>89%</td>
+                                <td>91%</td>
+                                <td>92%</td>
+                                <td><span class="trend-badge positive"><i class="fas fa-arrow-up"></i> +1.5%</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ingeniería</strong></td>
+                                <td>92%</td>
+                                <td>94%</td>
+                                <td>88%</td>
+                                <td>96%</td>
+                                <td><span class="trend-badge positive"><i class="fas fa-arrow-up"></i> +4%</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Recursos Humanos</strong></td>
+                                <td>90%</td>
+                                <td>93%</td>
+                                <td>92%</td>
+                                <td>91%</td>
+                                <td><span class="trend-badge positive"><i class="fas fa-arrow-up"></i> +3%</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Logística</strong></td>
+                                <td>84%</td>
+                                <td>87%</td>
+                                <td>85%</td>
+                                <td>90%</td>
+                                <td><span class="trend-badge neutral"><i class="fas fa-minus"></i> 0%</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mantenimiento</strong></td>
+                                <td>86%</td>
+                                <td>88%</td>
+                                <td>84%</td>
+                                <td>89%</td>
+                                <td><span class="trend-badge negative"><i class="fas fa-arrow-down"></i> -1%</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tabla-footer">
+                    <span><i class="fas fa-download"></i> <a href="#" id="descargarCSV">Descargar datos (CSV)</a></span>
+                    <span><i class="fas fa-print"></i> <a href="#" id="imprimirTabla">Imprimir tabla</a></span>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <img src="assets/images/banner/logo-cotemar.png" alt="Cotemar" class="footer-logo-img" />
+                    <span>Relaciones Laborales</span>
+                </div>
+                <p class="footer-desc">
+                    Construyendo un mejor lugar para trabajar en Cotemar, todos los días.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Enlaces rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="trabajo-social.html">Trabajo Social</a></li>
+                    <li><a href="gptw.html">GPTW</a></li>
+                    <li><a href="metricas.html">Métricas</a></li>
+                    <li><a href="buzon.html">Buzón</a></li>
+                    <li><a href="vida-empresa.html">Vida en la Empresa</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contáctanos</h4>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> contact@cotemar.com.mx</li>
+                    <li><i class="fas fa-phone"></i> +52 (938) 381 1400</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Cd. del Carmen, Camp.</li>
+                    <li><i class="fas fa-phone"></i> +52 (55) 9689 2600</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Ciudad de México</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Portal de Relaciones Laborales - Cotemar. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/metricas.js"></script>
+</body>
+</html>

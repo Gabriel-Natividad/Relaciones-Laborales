@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vida en la Empresa | Cotemar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/vida-empresa.css" />
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="assets/images/banner/logo-cotemar.png" alt="Cotemar" class="logo-img" />
+                    <span class="logo-text">Relaciones Laborales</span>
+                </a>
+            </div>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="trabajo-social.html"><i class="fas fa-hand-holding-heart"></i> Trabajo Social</a></li>
+                <li><a href="gptw.html"><i class="fas fa-trophy"></i> GPTW</a></li>
+                <li><a href="metricas.html"><i class="fas fa-chart-line"></i> Métricas</a></li>
+                <li><a href="buzon.html"><i class="fas fa-inbox"></i> Buzón</a></li>
+                <li><a href="vida-empresa.html" class="active"><i class="fas fa-users"></i> Vida en la Empresa</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="page-header-content">
+            <h1><i class="fas fa-users"></i> Vida en la Empresa</h1>
+            <p>Celebrando juntos cada momento en Cotemar</p>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="container">
+
+            <section class="seccion-filtros">
+                <div class="filtros-header">
+                    <h3><i class="fas fa-tag"></i> Filtros</h3>
+                    <span id="totalFotos" class="filtros-total">0 fotos</span>
+                </div>
+                <div class="filtros-botones" id="filtrosBotones">
+                    <button class="filtro-btn active" data-categoria="todos">
+                        <i class="fas fa-th-large"></i> Todos
+                    </button>
+                    <button class="filtro-btn" data-categoria="madre">
+                        <i class="fas fa-female"></i> Día de la Madre
+                    </button>
+                    <button class="filtro-btn" data-categoria="nino">
+                        <i class="fas fa-child"></i> Día del Niño
+                    </button>
+                    <button class="filtro-btn" data-categoria="posadas">
+                        <i class="fas fa-star"></i> Posadas
+                    </button>
+                    <button class="filtro-btn" data-categoria="integracion">
+                        <i class="fas fa-handshake"></i> Integración
+                    </button>
+                    <button class="filtro-btn" data-categoria="festejos">
+                        <i class="fas fa-birthday-cake"></i> Festejos
+                    </button>
+                </div>
+            </section>
+
+            <section class="seccion-galeria">
+                
+                <div class="galeria-grid" id="galeriaGrid">
+                </div>
+
+                <div class="album-embed-container">
+                    <div class="album-header">
+                        <h3><i class="fas fa-google"></i> Álbum de Google Photos</h3>
+                        <span class="album-badge">Actualización automática</span>
+                    </div>
+                    <div class="album-embed">
+
+                        <div class="embed-placeholder">
+                            <i class="fas fa-google"></i>
+                            <p>🔗 Galería de Google Photos</p>
+                            <span class="embed-nota">
+                                Al subir fotos al álbum, se actualizarán automáticamente aquí.
+                            </span>
+                            <div class="embed-acciones">
+                                <a href="#" class="btn-embed" id="btnCargarAlbum">
+                                    <i class="fas fa-sync"></i> Cargar álbum
+                                </a>
+                                <a href="#" class="btn-embed" id="btnVerAlbum">
+                                    <i class="fas fa-external-link-alt"></i> Ver en Google Photos
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="galeria-vacia" id="galeriaVacia">
+                    <i class="fas fa-camera"></i>
+                    <h3>No hay fotos en esta categoría</h3>
+                    <p>Pronto agregaremos más recuerdos de nuestros eventos.</p>
+                </div>
+            </section>
+
+            <section class="seccion-eventos">
+                <h2 class="section-title">📅 Próximos Eventos</h2>
+                <p class="section-description">
+                    No te pierdas las próximas celebraciones y actividades organizadas para ti.
+                </p>
+
+                <div class="eventos-grid">
+                    <div class="evento-card">
+                        <div class="evento-fecha">
+                            <span class="evento-dia">15</span>
+                            <span class="evento-mes">JUL</span>
+                        </div>
+                        <div class="evento-info">
+                            <h4>🎉 Convivencia Familiar</h4>
+                            <p>Evento para toda la familia de Cotemar</p>
+                            <span class="evento-ubicacion"><i class="fas fa-map-marker-alt"></i> Parque Central</span>
+                        </div>
+                    </div>
+
+                    <div class="evento-card">
+                        <div class="evento-fecha">
+                            <span class="evento-dia">28</span>
+                            <span class="evento-mes">AGO</span>
+                        </div>
+                        <div class="evento-info">
+                            <h4>🎊 Día del Colaborador</h4>
+                            <p>Celebración y reconocimiento a todo el equipo</p>
+                            <span class="evento-ubicacion"><i class="fas fa-map-marker-alt"></i> Auditorio Central</span>
+                        </div>
+                    </div>
+
+                    <div class="evento-card">
+                        <div class="evento-fecha">
+                            <span class="evento-dia">10</span>
+                            <span class="evento-mes">SEP</span>
+                        </div>
+                        <div class="evento-info">
+                            <h4>🎭 Feria de la Salud</h4>
+                            <p>Jornada de bienestar y prevención</p>
+                            <span class="evento-ubicacion"><i class="fas fa-map-marker-alt"></i> Instalaciones Cotemar</span>
+                        </div>
+                    </div>
+
+                    <div class="evento-card">
+                        <div class="evento-fecha">
+                            <span class="evento-dia">15</span>
+                            <span class="evento-mes">SEP</span>
+                        </div>
+                        <div class="evento-info">
+                            <h4>🇲🇽 Fiestas Patrias</h4>
+                            <p>Celebración del mes patrio con toda la familia Cotemar</p>
+                            <span class="evento-ubicacion"><i class="fas fa-map-marker-alt"></i> Jardín Central</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="seccion-subir">
+                <div class="subir-container">
+                    <div class="subir-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <div class="subir-info">
+                        <h3>📸 ¡Comparte tus recuerdos!</h3>
+                        <p>
+                            Si tienes fotos de eventos de Cotemar, envíalas a Relaciones Laborales
+                            para que las incluyamos en nuestra galería.
+                        </p>
+                        <div class="subir-acciones">
+                            <a href="mailto:rrhh@cotemar.com.mx?subject=Fotos%20eventos%20Cotemar" class="btn-subir">
+                                <i class="fas fa-envelope"></i> Enviar por correo
+                            </a>
+                            <a href="#" class="btn-subir-secundario" id="btnSubirFotos">
+                                <i class="fas fa-info-circle"></i> Más información
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <img src="assets/images/banner/logo-cotemar.png" alt="Cotemar" class="footer-logo-img" />
+                    <span>Relaciones Laborales</span>
+                </div>
+                <p class="footer-desc">
+                    Construyendo un mejor lugar para trabajar en Cotemar, todos los días.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Enlaces rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="trabajo-social.html">Trabajo Social</a></li>
+                    <li><a href="gptw.html">GPTW</a></li>
+                    <li><a href="metricas.html">Métricas</a></li>
+                    <li><a href="buzon.html">Buzón</a></li>
+                    <li><a href="vida-empresa.html">Vida en la Empresa</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contáctanos</h4>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> contact@cotemar.com.mx</li>
+                    <li><i class="fas fa-phone"></i> +52 (938) 381 1400</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Cd. del Carmen, Camp.</li>
+                    <li><i class="fas fa-phone"></i> +52 (55) 9689 2600</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Ciudad de México</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Portal de Relaciones Laborales - Cotemar. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/vida-empresa.js"></script>
+</body>
+</html>
